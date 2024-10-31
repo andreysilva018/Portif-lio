@@ -2,7 +2,6 @@ body {
   background-color: rgb(160, 160, 149);
 }
 .container {
-  margin: 50px;
   padding: 80px 30px;
   perspective: 1000px;
 }
@@ -127,17 +126,30 @@ body {
   cursor: pointer;
 }
 
-.botao-home-celular {
+.botoes {
   width: 30px;
-  height: 5px;
+  height: 10px;
   background-color: #ffffff;
   border: 3px solid black;
   border-radius: 5px;
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.4s ease;
+}
+.botoes:hover {
+  background-color: rgb(179, 255, 0);
+  transform: translate(-50% -10px) scale(1.1);
+}
+/* justify-self: center;
+color: rgb(104, 104, 104);
+text-decoration: none;
+color: balck; */
+
+.botoes a {
+  color: black;
 }
 
 .conteudo img {
@@ -152,7 +164,8 @@ body {
   margin: 0;
 }
 
-.btn {
+.ver-mais .btn {
+  display: inline-block;
   font-size: 11px;
   color: black;
   background-color: rgb(10, 248, 248);
@@ -169,10 +182,49 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon {
   font-size: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.carousel-indicators {
+  bottom: 0;
+  margin: -25px;
+}
+
+.carousel-indicators button,
+.carousel-indicators button:hover {
+  background-color: rgb(38, 77, 150);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next,
+.carousel-control-next-icon,
+.visually-hidden,
+.carousel-control-prev {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.simbolos {
+  justify-self: flex-end;
+  margin-top: -14px;
+}
+
+.simbolos i {
+  font-size: 9px;
+}
+
+.fa-battery-three-quarters {
+  margin-right: 12px;
+}
+
+.ver-mais i {
+  margin-top: 10px;
 }
